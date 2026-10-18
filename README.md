@@ -1,12 +1,13 @@
 # puzzlr-site
 
 Public site for the Puzzlr app: privacy policy and support pages, hosted on
-GitHub Pages. Plain static HTML, no build step.
+GitHub Pages at https://content.puzzlr.koraykural.com (see `CNAME`). Plain static HTML, no build step.
 
 - `privacy.html` / `privacy-tr.html` - Privacy Policy (EN / TR)
 - `support.html` / `support-tr.html` - Support (EN / TR)
 - `index.html` - landing page linking to the above
 - `style.css` - shared styling, in the app's design language
+- `favicon.png` - Lexi alone, the tab icon; `apple-touch-icon.png` - the app icon, for home screens
 - `fonts/` - the app's fonts, served from here (see `fonts/README.md`)
 
 The app code lives in a separate private repo.
