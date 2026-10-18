@@ -4,67 +4,111 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Puzzlr Privacy Policy</title>
+<meta name="description" content="What the Puzzlr app sends off your device, why, and what you can switch off.">
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" hreflang="tr" href="privacy-tr.html">
+<link rel="preload" href="fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
-<header class="site"><span class="logo">Puzzlr</span></header>
+<header class="site">
+<a class="wordmark" href="index.html" aria-label="Puzzlr home"><span class="t">P</span><span class="s">U</span><span class="o">Z</span><span class="t">Z</span><span class="s">L</span><span class="t">R</span></a>
+<nav><a class="cap" href="privacy-tr.html" lang="tr" hreflang="tr">Türkçe</a></nav>
+</header>
+
+<main class="sheet">
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: September 12, 2026</p>
-<p class="lang"><a href="privacy-tr.html">Türkçe</a></p>
+<p class="updated">Last updated: October 18, 2026</p>
 
-<p>Puzzlr is a collection of offline puzzle games. We built it to be simple and private. There are no accounts, no logins, and no ads. This policy explains the limited data the app collects and why.</p>
+<p class="lead">Puzzlr is a collection of puzzle games that play offline. There are no accounts, no logins and no ads. This page explains what the app sends off your device, why, and what you can switch off.</p>
 
-<h2>What we collect</h2>
+<nav class="toc" aria-label="On this page">
+<p>On this page</p>
+<ol>
+<li><a href="#collect">What we collect</a></li>
+<li><a href="#downloads">What the app downloads</a></li>
+<li><a href="#not-collected">What we do not collect</a></li>
+<li><a href="#icloud">iCloud on iPhone and iPad</a></li>
+<li><a href="#coins">Coins and the estate</a></li>
+<li><a href="#use">How we use it</a></li>
+<li><a href="#processors">Who processes it</a></li>
+<li><a href="#choice">Your choice</a></li>
+<li><a href="#retention">How long we keep it</a></li>
+<li><a href="#children">Children</a></li>
+<li><a href="#changes">Changes</a></li>
+<li><a href="#contact">Contact</a></li>
+</ol>
+</nav>
+
+<h2 id="collect">What we collect</h2>
 <ul>
-<li><strong>Anonymous usage and diagnostics.</strong> Puzzlr uses Google Firebase (Analytics and Crashlytics) to understand how the games are used and to fix problems. This includes app usage events (for example, which game you opened, whether a round was finished, and which garden item you bought), a random app-instance identifier, and technical details such as your device model, operating system version, app version, and the general region derived from your IP address.</li>
-<li><strong>Crash reports.</strong> If the app crashes, Firebase Crashlytics sends us a diagnostic report so we can fix the issue.</li>
-<li><strong>Feedback you choose to send.</strong> Puzzlr sometimes asks how you are finding a game. If you answer, we store what you sent: the rating you picked, the note you typed if you wrote one, which game it was about, and your app version, platform, and language. Nothing is sent unless you tap Send. Please leave personal details out of the note. We do not want them, and we cannot reply to it. If you need an answer, email us instead.</li>
+<li><strong>Usage data.</strong> To learn how the games are played and where they go wrong, Puzzlr records what happens in the app: which game you opened, whether a round was finished, what you spent coins on, the screens you visited, what you tapped and where on the screen, and the moves you made in a puzzle. It also records technical details such as your device model, screen size, operating system version, app version, language, and the general region worked out from your IP address. It never records what you type, and it never takes a picture of your screen. This goes to Google Firebase (Analytics and Cloud Firestore).</li>
+<li><strong>A random player number.</strong> On its first launch the app makes up a random string and sends it along with the usage data, so we can tell that a set of rounds were played by the same person. It is not your name, it is not your device's advertising identifier, and it is not worked out from anything about you or your device, so it cannot be matched with data from other apps. On iPhone and iPad it is kept with your progress in your own iCloud account, so your phone and your tablet count as one player. Firebase Analytics also keeps a random identifier of its own for each installation.</li>
+<li><strong>Crash reports.</strong> If the app crashes, Firebase Crashlytics sends us a diagnostic report so we can fix the problem.</li>
+<li><strong>Reactions you choose to give.</strong> After a puzzle, Puzzlr asks how it was, with three buttons: Loved it, Liked it and Disliked it. If you tap one, we store which one and which puzzle it was about. Nothing else goes with it: no score, no board, no time, and nothing you typed. Other players see only the totals. Your reaction is filed under a scrambled form of your player number (a salted hash) rather than the number itself. That keeps one person to one vote and lets you change your mind, and it keeps reactions apart from the usage data. It does not make a reaction anonymous, because someone holding both could work out the link.</li>
+<li><strong>Feedback you choose to send.</strong> Puzzlr sometimes asks how you are finding a game. If you answer, we store what you sent: the rating you picked, the note you typed if you wrote one, which game it was about, and your app version, platform and language. Nothing is sent unless you tap Send. Please leave personal details out of the note. We do not want them, and we cannot reply to it. If you need an answer, email us instead.</li>
 </ul>
 
-<h2>What we do not collect</h2>
+<h2 id="downloads">What the app downloads</h2>
+<p>Today's place comes with a story, a few figures, photos and sometimes music. The app downloads these from our own server, <strong>media.puzzlr.koraykural.com</strong>, which runs on Amazon Web Services (Amazon S3 and CloudFront). It checks for new content when you open the app and when you come back to it. While you are online it also downloads the next two days' places ahead of time, so they are ready if you play without a connection later.</p>
+<p>These are plain downloads. The app sends no player number, no account and nothing else about you with them. Like any web server, ours sees your IP address and which file was asked for, because that is how a file gets delivered. Nothing about you is stored from these downloads. Without a connection the app uses the copy it already has, and a story opens without its photos and music.</p>
+<p>When you share a result, the link holds the puzzle and how you did, never your name or your player number. Our link server only draws the preview from what is in the link, and it stores nothing.</p>
+
+<h2 id="not-collected">What we do not collect</h2>
 <ul>
-<li>No name, email address, or account. Puzzlr has no login and never asks who you are.</li>
+<li>No name, email address or account. Puzzlr has no login and never asks who you are.</li>
 <li>No advertising identifiers, and no tracking of you across other apps or websites.</li>
 <li>No precise location.</li>
-<li>No payment information. Puzzlr has nothing to buy with real money, so there is no card, billing address, or purchase history.</li>
+<li>Nothing you type, apart from a feedback note you choose to send.</li>
+<li>No payment information. Puzzlr has nothing to buy with real money, so there is no card, billing address or purchase history.</li>
 <li>Your game progress is never sent to us. On iPhone and iPad it syncs through your own iCloud account, which we cannot read.</li>
+<li>The daily reminder is set up on your device. It uses no push service, and its schedule is not sent to us.</li>
 </ul>
 
-<h2>iCloud on iPhone and iPad</h2>
-<p>Puzzlr saves your play history, your streaks and any unfinished puzzles to the iCloud account already signed in on your device, so they follow you to a new iPhone or iPad. There is still nothing to sign up for and no account to create.</p>
+<h2 id="icloud">iCloud on iPhone and iPad</h2>
+<p>Puzzlr saves your play history, your streak, any unfinished puzzles, your coins, your estate, your passport and your random player number to the iCloud account already signed in on your device, so they follow you to a new iPhone or iPad. There is still nothing to sign up for and no account to create. Your settings, including the analytics switch and the daily reminder, stay on each device.</p>
 <p>That data goes to your iCloud account, not to us. We cannot read it, and Apple does not give us access to it. Apple's handling of it is governed by the <a href="https://www.apple.com/legal/privacy/" rel="noopener" target="_blank">Apple Privacy Policy</a>.</p>
 <p>If you would rather it stayed on one device, sign out of iCloud or turn off iCloud Drive in the iOS Settings app. Puzzlr keeps working exactly the same way, with everything kept on that device. There is no equivalent on Android, where your progress always stays on the device.</p>
 
-<h2>Coins and the garden</h2>
-<p>Puzzlr pays out coins for the puzzles you solve, and you spend them on hints or on plants for your garden. Coins are earned by playing and by nothing else. There are no in-app purchases, no subscriptions, and no ads, so there is nothing to buy with real money and no payment details for us to see. There is also no gambling of any kind: no loot boxes, no prize wheels, no random rewards. Every item in the shop has a fixed price and you can see exactly what you are getting before you spend.</p>
-<p>Your coin balance and your garden are stored on your device, the same as the rest of your progress. We never receive either. On iPhone and iPad they travel with your progress through your own iCloud account, as described above.</p>
+<h2 id="coins">Coins and the estate</h2>
+<p>Puzzlr pays out coins for the puzzles you solve, and you spend them on hints or on buildings for your estate. Coins are earned by playing and by nothing else. There are no in-app purchases, no subscriptions and no ads, so there is nothing to buy with real money and no payment details for us to see. There is also no gambling of any kind: no loot boxes, no prize wheels, no random rewards. Every hint and every building has a fixed price, and you can see exactly what you are getting before you spend.</p>
+<p>Your coin balance and your estate are stored on your device, the same as the rest of your progress. We never receive either. On iPhone and iPad they travel with your progress through your own iCloud account, as described above.</p>
 
-<h2>How we use it</h2>
-<p>Only to improve the games and fix bugs. We do not sell your data, and we do not use it for advertising.</p>
+<h2 id="use">How we use it</h2>
+<p>To improve the games, to fix bugs, and to show the reaction totals after a puzzle. We do not sell your data, and we do not use it for advertising.</p>
 
-<h2>Who processes it</h2>
-<p>Google acts as our analytics, crash reporting, and feedback storage provider through Firebase (Analytics, Crashlytics, and Cloud Firestore). Google's handling of this data is governed by the <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a>.</p>
-<p>Apple stores the iCloud data described above on your behalf. It sits in your account rather than ours, and Puzzlr cannot read it back out of iCloud on any device but yours.</p>
+<h2 id="processors">Who processes it</h2>
+<p><strong>Google</strong>, through Firebase (Analytics, Crashlytics and Cloud Firestore), stores the usage data, crash reports, reactions and feedback for us. Google's handling of this data is governed by the <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Privacy Policy</a>.</p>
+<p><strong>Amazon Web Services</strong> hosts the server the content for Today's place is downloaded from. It delivers files and holds nothing about you.</p>
+<p><strong>Apple</strong> stores the iCloud data described above on your behalf. It sits in your account rather than ours, and Puzzlr cannot read it back out of iCloud on any device but yours.</p>
 
-<h2>Your choice</h2>
-<p>You can turn this off at any time. Open Settings inside Puzzlr and switch off "Share anonymous usage data." When it is off, the app stops sending analytics and crash data.</p>
-<p>Feedback works differently, so the switch does not cover it. A feedback note is only ever sent because you wrote it and tapped Send. If you would rather not send one, close the prompt with "Maybe later."</p>
-<p>iCloud sync is separate again. It follows your device's own iCloud setting rather than a switch inside Puzzlr, as described in the iCloud section above.</p>
+<h2 id="choice">Your choice</h2>
+<p>You can turn this off at any time. In Puzzlr, open the Me tab, then Settings, and switch off "Share anonymous usage data." While it is off, the app stops sending usage data and crash reports, and your player number is no longer sent with them.</p>
+<p>Reactions and feedback work differently, so the switch does not cover them. Each is only ever sent because you tapped it: one of the three reaction buttons, or Send on a note. If you would rather not, leave the buttons alone, or close the feedback prompt with "Maybe later."</p>
+<p>The downloads for Today's place are not covered by the switch either, because they carry nothing about you.</p>
+<p>iCloud sync follows your device's own iCloud setting rather than a switch inside Puzzlr, as described in the iCloud section above.</p>
 
-<h2>Data retention</h2>
-<p>Firebase keeps analytics data for a limited period under Google's defaults. Crash reports are kept while they remain useful for fixing problems. Feedback is kept while it is still useful for improving the games, and deleted once it is not.</p>
+<h2 id="retention">How long we keep it</h2>
+<ul>
+<li>Firebase Analytics keeps analytics data for a limited period under Google's defaults.</li>
+<li>The record of what was tapped and played in a session is deleted after 30 days.</li>
+<li>Crash reports are kept while they remain useful for fixing problems.</li>
+<li>Feedback is kept while it is still useful for improving the games, and deleted once it is not.</li>
+<li>Reactions are kept, because an old daily puzzle can still be opened from a shared link and its totals should still be there.</li>
+</ul>
 
-<h2>Children</h2>
+<h2 id="children">Children</h2>
 <p>Puzzlr is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
 
-<h2>Changes</h2>
-<p>If we change this policy, we will update this page and the date above.</p>
+<h2 id="changes">Changes</h2>
+<p>If we change this policy, we will update this page and the date at the top.</p>
 
-<h2>Contact</h2>
+<h2 id="contact">Contact</h2>
 <p>Questions? Email us at <a href="mailto:puzzlr-support@koraykural.com">puzzlr-support@koraykural.com</a>.</p>
+</main>
 
-<footer>© 2026 Koray Kural</footer>
+<footer>© 2026 Koray Kural · <a href="support.html">Support</a></footer>
 </div>
 </body>
 </html>

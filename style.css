@@ -1,31 +1,275 @@
-:root {
-  --bg: #faf8f4;
-  --fg: #22201c;
-  --muted: #6b6560;
-  --accent: #5b8def;
-  --card: #ffffff;
-  --border: #eae5dd;
+/* Puzzlr site. The app's look (ink outlines on dotted paper, keycaps with a
+   lip), kept quiet for reading. Tokens come from the app's
+   lib/theme/app_colors.dart. */
+
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/nunito.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Baloo 2";
+  src: url("fonts/baloo2.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --screen: #fffbf3;
+  --card: #ffffff;
+  --outline: #26242b;
+  --ink: #26242b;
+  --subtle: #6b6862;
+  --muted: #8a8791;
+  --dot: rgba(38, 36, 43, 0.10);
+  --hairline: #efe9df;
+  --key: #ece5d6;
+  --primary: #2c9c8f;
+  --link: #1d7a6f;
+  --tint: #e4f4f1;
+  --slate: #7c8088;
+  --orange: #e08a3c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --screen: #24252b;
+    --card: #34353e;
+    --outline: #0a0a0d;
+    --ink: #f4f1ea;
+    --subtle: #c8c4bc;
+    --muted: #aaa7b1;
+    --dot: rgba(255, 255, 255, 0.05);
+    --hairline: #464751;
+    --key: #464752;
+    --link: #6fd0c3;
+    --tint: #27403d;
+  }
+}
+
 * { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--screen);
+  /* The app's paper: a dot every 16px, 2.2px across. */
+  background-image: radial-gradient(circle, var(--dot) 1.1px, transparent 1.6px);
+  background-size: 16px 16px;
+  background-position: 8px 8px;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
 }
-.wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
-header.site { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
-header.site .logo { font-weight: 700; font-size: 20px; letter-spacing: -0.02em; }
-h1 { font-size: 28px; letter-spacing: -0.02em; margin: 20px 0 4px; }
-h2 { font-size: 19px; margin: 32px 0 8px; }
-.updated { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.lang { font-size: 14px; color: var(--muted); margin-top: 4px; }
-ul { padding-left: 20px; }
-li { margin: 6px 0; }
-.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; margin-top: 20px; }
-footer { margin-top: 56px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 20px; }
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #17150f; --fg: #efe9e0; --muted: #9a938a; --card: #211e18; --border: #322e26; }
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 16px 64px;
+}
+
+/* Header: the wordmark, and the way to the other language. */
+
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.wordmark {
+  display: inline-flex;
+  gap: 3px;
+  padding: 2px 2px 5px;
+  text-decoration: none;
+}
+.wordmark span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding-top: 2px;
+  border: 2px solid var(--outline);
+  border-radius: 7px;
+  box-shadow: 0 3px 0 var(--outline);
+  color: #fff;
+  font-family: "Baloo 2", "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 1;
+}
+.wordmark span:nth-child(odd) { transform: rotate(-4deg); }
+.wordmark span:nth-child(even) { transform: translateY(1px) rotate(3deg); }
+.wordmark .t { background: var(--primary); }
+.wordmark .s { background: var(--slate); }
+.wordmark .o { background: var(--orange); }
+
+/* A keycap: outlined, on a hard lip, and it sinks into the lip when pressed. */
+
+.cap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 6px 16px;
+  border: 2px solid var(--outline);
+  border-radius: 12px;
+  box-shadow: 0 3px 0 var(--outline);
+  background: var(--card);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 60ms ease-out, box-shadow 60ms ease-out;
+}
+.cap:hover { background: var(--key); }
+.cap:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--outline);
+}
+.cap:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+.cap .arrow { color: var(--muted); font-weight: 700; }
+
+/* The sheet the document is printed on: a card with the outline, no lip,
+   since it only shows something. */
+
+main.sheet {
+  background: var(--card);
+  border: 2px solid var(--outline);
+  border-radius: 16px;
+  padding: 32px 40px 36px;
+}
+
+h1, h2, h3 {
+  font-family: "Baloo 2", "Nunito", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+h1 { font-size: 34px; margin: 0 0 6px; }
+h2 {
+  font-size: 23px;
+  margin: 40px 0 10px;
+  padding-top: 24px;
+  border-top: 2px solid var(--hairline);
+}
+h3 { font-size: 19px; font-weight: 700; margin: 24px 0 6px; }
+
+.updated {
+  margin: 0 0 24px;
+  color: var(--subtle);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lead { font-size: 18.5px; color: var(--ink); }
+
+p, ul, ol { margin: 0 0 14px; }
+ul, ol { padding-left: 22px; }
+li { margin: 8px 0; padding-left: 2px; }
+li::marker { color: var(--muted); }
+strong { font-weight: 800; }
+
+a {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--link) 40%, transparent);
+}
+a:hover { text-decoration-color: var(--link); }
+
+/* A quiet aside: the tint of the app's teal, outlined. */
+.note {
+  margin: 18px 0;
+  padding: 14px 18px;
+  background: var(--tint);
+  border: 2px solid var(--outline);
+  border-radius: 14px;
+}
+.note p:last-child { margin-bottom: 0; }
+
+/* Contents list at the top of a long page. */
+nav.toc {
+  margin: 0 0 8px;
+  padding: 14px 18px;
+  border: 2px dashed var(--muted);
+  border-radius: 14px;
+}
+nav.toc p {
+  margin: 0 0 4px;
+  color: var(--subtle);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+nav.toc ol { margin: 0; columns: 2; column-gap: 28px; }
+nav.toc li { margin: 0; padding: 3px 0; break-inside: avoid; font-size: 15.5px; }
+
+/* The landing page's doors: cards that open something carry a lip. */
+.doors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 8px 0 24px;
+}
+.doors .cap {
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 12px 18px;
+  font-size: 17px;
+}
+.lang-label {
+  margin: 28px 0 10px;
+  color: var(--subtle);
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+footer {
+  margin-top: 28px;
+  color: var(--subtle);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+footer a { font-weight: 700; }
+
+@media (max-width: 600px) {
+  body { font-size: 16.5px; }
+  .wrap { padding-top: 20px; }
+  main.sheet { padding: 22px 18px 26px; border-radius: 14px; }
+  h1 { font-size: 29px; }
+  h2 { font-size: 21px; margin-top: 32px; padding-top: 20px; }
+  nav.toc ol { columns: 1; }
+  .doors { grid-template-columns: 1fr; }
+  .wordmark span { width: 26px; height: 26px; font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cap { transition: none; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  main.sheet { border: 0; padding: 0; }
+  header.site nav, nav.toc { display: none; }
+  a { color: #000; }
 }

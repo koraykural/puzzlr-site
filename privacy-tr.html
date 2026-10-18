@@ -4,67 +4,111 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Puzzlr Gizlilik Politikası</title>
+<meta name="description" content="Puzzlr uygulamasının cihazınızdan neyi, neden gönderdiği ve neleri kapatabileceğiniz.">
+<meta name="color-scheme" content="light dark">
+<link rel="alternate" hreflang="en" href="privacy.html">
+<link rel="preload" href="fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
-<header class="site"><span class="logo">Puzzlr</span></header>
+<header class="site">
+<a class="wordmark" href="index.html" aria-label="Puzzlr ana sayfa"><span class="t">P</span><span class="s">U</span><span class="o">Z</span><span class="t">Z</span><span class="s">L</span><span class="t">R</span></a>
+<nav><a class="cap" href="privacy.html" lang="en" hreflang="en">English</a></nav>
+</header>
+
+<main class="sheet">
 <h1>Gizlilik Politikası</h1>
-<p class="updated">Son güncelleme: 12 Eylül 2026</p>
-<p class="lang"><a href="privacy.html">English</a></p>
+<p class="updated">Son güncelleme: 18 Ekim 2026</p>
 
-<p>Puzzlr, çevrimdışı oynanan bulmaca oyunlarından oluşan bir koleksiyondur. Uygulamayı sade ve gizliliğe saygılı olacak şekilde tasarladık. Hesap, giriş ve reklam yoktur. Bu politika, uygulamanın topladığı sınırlı veriyi ve nedenini açıklar.</p>
+<p class="lead">Puzzlr, internet olmadan da oynanan bulmaca oyunlarından oluşan bir koleksiyondur. Hesap, giriş ve reklam yoktur. Bu sayfada uygulamanın cihazınızdan dışarıya neyi gönderdiğini, bunu neden yaptığını ve neleri kapatabileceğinizi anlatıyoruz.</p>
 
-<h2>Topladığımız veriler</h2>
+<nav class="toc" aria-label="Bu sayfada">
+<p>Bu sayfada</p>
+<ol>
+<li><a href="#topladiklarimiz">Topladığımız veriler</a></li>
+<li><a href="#indirilenler">Uygulamanın indirdikleri</a></li>
+<li><a href="#toplamadiklarimiz">Toplamadığımız veriler</a></li>
+<li><a href="#icloud">iPhone ve iPad'de iCloud</a></li>
+<li><a href="#altin">Altın ve çiftlik</a></li>
+<li><a href="#kullanim">Verileri ne için kullanırız</a></li>
+<li><a href="#isleyenler">Verileri kim işler</a></li>
+<li><a href="#tercih">Tercihiniz</a></li>
+<li><a href="#saklama">Ne kadar saklarız</a></li>
+<li><a href="#cocuklar">Çocuklar</a></li>
+<li><a href="#degisiklikler">Değişiklikler</a></li>
+<li><a href="#iletisim">İletişim</a></li>
+</ol>
+</nav>
+
+<h2 id="topladiklarimiz">Topladığımız veriler</h2>
 <ul>
-<li><strong>Anonim kullanım ve tanılama verileri.</strong> Puzzlr, oyunların nasıl kullanıldığını anlamak ve sorunları gidermek için Google Firebase (Analytics ve Crashlytics) kullanır. Buna kullanım olayları (örneğin hangi oyunu açtığınız, bir turu bitirip bitirmediğiniz ve bahçe dükkânından hangi ürünü aldığınız), rastgele bir uygulama örneği kimliği ve cihaz modeliniz, işletim sistemi sürümünüz, uygulama sürümünüz ile IP adresinizden çıkarılan genel bölge gibi teknik ayrıntılar dahildir.</li>
-<li><strong>Çökme raporları.</strong> Uygulama çökerse, sorunu düzeltebilmemiz için Firebase Crashlytics bize bir tanılama raporu gönderir.</li>
-<li><strong>Göndermeyi seçtiğiniz görüşler.</strong> Puzzlr zaman zaman bir oyunu nasıl bulduğunuzu sorar. Yanıt verirseniz gönderdiklerinizi saklarız: seçtiğiniz değerlendirme, yazdıysanız notunuz, hangi oyunla ilgili olduğu ve uygulama sürümünüz, platformunuz ve diliniz. Siz Gönder'e dokunmadıkça hiçbir şey gönderilmez. Lütfen notunuza kişisel bilgi yazmayın. Bu bilgileri istemiyoruz ve nota yanıt veremiyoruz. Yanıt gerekiyorsa bunun yerine bize e-posta gönderin.</li>
+<li><strong>Kullanım verisi.</strong> Oyunların nasıl oynandığını ve nerede aksadığını görebilmek için Puzzlr uygulamada olanları kaydeder: hangi oyunu açtığınızı, bir turu bitirip bitirmediğinizi, altınlarınızı neye harcadığınızı, hangi ekranlara girdiğinizi, ekranın neresinde neye dokunduğunuzu ve bir bulmacada yaptığınız hamleleri. Bunların yanında cihaz modeliniz, ekran boyutunuz, işletim sistemi sürümünüz, uygulama sürümünüz, diliniz ve IP adresinizden çıkarılan genel bölge gibi teknik bilgiler de kaydedilir. Yazdığınız hiçbir şey kaydedilmez, ekranınızın görüntüsü de alınmaz. Bu veriler Google Firebase'e (Analytics ve Cloud Firestore) gider.</li>
+<li><strong>Rastgele bir oyuncu numarası.</strong> Uygulama ilk açıldığında rastgele bir dizi üretir ve bunu kullanım verisiyle birlikte gönderir. Böylece bir grup turun aynı kişiye ait olduğunu anlayabiliriz. Bu numara adınız değildir, cihazınızın reklam kimliği değildir ve sizinle ya da cihazınızla ilgili hiçbir bilgiden türetilmez. Bu yüzden başka uygulamaların verileriyle eşleştirilemez. iPhone ve iPad'de ilerlemenizle birlikte kendi iCloud hesabınızda durur; telefonunuz ve tabletiniz böylece tek oyuncu sayılır. Firebase Analytics de her kurulum için kendine ait rastgele bir kimlik tutar.</li>
+<li><strong>Çökme raporları.</strong> Uygulama çökerse, sorunu giderebilmemiz için Firebase Crashlytics bize bir tanılama raporu gönderir.</li>
+<li><strong>Vermeyi seçtiğiniz tepkiler.</strong> Bir bulmacanın sonunda Puzzlr nasıl bulduğunuzu üç düğmeyle sorar: Bayıldım, Beğendim ve Beğenmedim. Birine dokunursanız hangisini seçtiğinizi ve hangi bulmaca için seçtiğinizi saklarız. Yanında başka hiçbir şey gitmez: ne puan, ne tahta, ne süre, ne de yazdığınız bir şey. Diğer oyuncular yalnızca toplamları görür. Tepkiniz oyuncu numaranızın kendisiyle değil, karıştırılmış bir biçimiyle (tuzlanmış bir özet) kaydedilir. Bu sayede her kişinin tek oyu olur, fikrinizi değiştirebilirsiniz ve tepkiler kullanım verisinden ayrı durur. Ancak bu, tepkiyi anonim yapmaz: iki veriye birden sahip olan biri bağlantıyı kurabilir.</li>
+<li><strong>Göndermeyi seçtiğiniz görüşler.</strong> Puzzlr zaman zaman bir oyunu nasıl bulduğunuzu sorar. Yanıt verirseniz gönderdiklerinizi saklarız: seçtiğiniz değerlendirme, yazdıysanız notunuz, hangi oyunla ilgili olduğu ve uygulama sürümünüz, platformunuz ve diliniz. Siz Gönder'e dokunmadıkça hiçbir şey gönderilmez. Lütfen notunuza kişisel bilgi yazmayın. Bu bilgileri istemiyoruz ve nota yanıt veremiyoruz. Yanıt gerekiyorsa bize e-posta gönderin.</li>
 </ul>
 
-<h2>Toplamadığımız veriler</h2>
+<h2 id="indirilenler">Uygulamanın indirdikleri</h2>
+<p>Bugünün yeri bir hikâye, birkaç rakam, fotoğraflar ve bazen de müzikle gelir. Uygulama bunları kendi sunucumuz <strong>media.puzzlr.koraykural.com</strong> adresinden indirir. Bu sunucu Amazon Web Services üzerinde (Amazon S3 ve CloudFront) çalışır. Uygulama, açıldığında ve ona geri döndüğünüzde yeni içerik olup olmadığına bakar. İnternete bağlıyken sonraki iki günün yerlerini de önceden indirir; böylece daha sonra bağlantısız oynarsanız onlar da hazır olur.</p>
+<p>Bunlar sıradan indirmelerdir. Uygulama bu sırada oyuncu numarası, hesap ya da sizinle ilgili başka bir bilgi göndermez. Her web sunucusu gibi bizimki de IP adresinizi ve hangi dosyanın istendiğini görür, çünkü bir dosya ancak böyle teslim edilebilir. Bu indirmelerden sizinle ilgili hiçbir şey saklanmaz. Bağlantı yoksa uygulama elindeki kopyayı kullanır ve hikâye fotoğrafsız, müziksiz açılır.</p>
+<p>Bir sonucu paylaştığınızda bağlantıda yalnızca bulmaca ve nasıl oynadığınız bulunur; adınız ya da oyuncu numaranız asla yer almaz. Bağlantı sunucumuz önizlemeyi yalnızca bağlantının içindekilerden çizer ve hiçbir şey saklamaz.</p>
+
+<h2 id="toplamadiklarimiz">Toplamadığımız veriler</h2>
 <ul>
-<li>Ad, e-posta adresi veya hesap yok. Puzzlr'da giriş yoktur ve kim olduğunuzu hiç sormayız.</li>
-<li>Reklam kimliği yok ve sizi başka uygulama veya web sitelerinde izleme yok.</li>
+<li>Ad, e-posta adresi veya hesap yok. Puzzlr'da giriş yoktur ve kim olduğunuzu hiç sormaz.</li>
+<li>Reklam kimliği yok; sizi başka uygulamalarda veya web sitelerinde izlemek de yok.</li>
 <li>Kesin konum yok.</li>
-<li>Ödeme bilgisi yok. Puzzlr'da gerçek parayla alınan bir şey olmadığı için kart, fatura adresi veya satın alma geçmişi tutulmaz.</li>
-<li>Oyun ilerlemeniz bize gönderilmez. iPhone ve iPad'de kendi iCloud hesabınız üzerinden eşitlenir, biz bu veriyi okuyamayız.</li>
+<li>Göndermeyi seçtiğiniz bir görüş notu dışında yazdığınız hiçbir şey yok.</li>
+<li>Ödeme bilgisi yok. Puzzlr'da gerçek parayla alınan bir şey olmadığı için kart, fatura adresi veya satın alma geçmişi de yoktur.</li>
+<li>Oyun ilerlemeniz bize hiç gönderilmez. iPhone ve iPad'de kendi iCloud hesabınız üzerinden eşitlenir ve biz bu veriyi okuyamayız.</li>
+<li>Günlük hatırlatma cihazınızda kurulur. Bir bildirim sunucusu kullanmaz ve zamanlaması bize gönderilmez.</li>
 </ul>
 
-<h2>iPhone ve iPad'de iCloud</h2>
-<p>Puzzlr; oyun geçmişinizi, serilerinizi ve yarım kalan bulmacalarınızı cihazınızda zaten açık olan iCloud hesabınıza kaydeder. Böylece yeni bir iPhone veya iPad'e geçtiğinizde onlar da sizinle gelir. Yine kaydolmanız gereken bir şey ya da oluşturmanız gereken bir hesap yoktur.</p>
+<h2 id="icloud">iPhone ve iPad'de iCloud</h2>
+<p>Puzzlr; oyun geçmişinizi, serinizi, yarım kalan bulmacalarınızı, altınlarınızı, çiftliğinizi, pasaportunuzu ve rastgele oyuncu numaranızı cihazınızda zaten açık olan iCloud hesabına kaydeder. Böylece yeni bir iPhone veya iPad'e geçtiğinizde hepsi sizinle gelir. Yine de kaydolmanız ya da hesap açmanız gerekmez. Analiz seçeneği ve günlük hatırlatma dahil ayarlarınız ise her cihazda ayrı kalır.</p>
 <p>Bu veri bize değil, sizin iCloud hesabınıza gider. Biz onu okuyamayız ve Apple bize erişim vermez. Apple'ın bu veriyi işlemesi <a href="https://www.apple.com/tr/legal/privacy/" rel="noopener" target="_blank">Apple Gizlilik Politikası</a> ile yönetilir.</p>
-<p>Verilerin tek cihazda kalmasını tercih ederseniz iOS Ayarlar uygulamasından iCloud hesabınızdan çıkış yapabilir veya iCloud Drive'ı kapatabilirsiniz. Puzzlr tamamen aynı şekilde çalışmaya devam eder, her şey o cihazda kalır. Android'de bunun bir karşılığı yoktur, orada ilerlemeniz her zaman cihazda kalır.</p>
+<p>Verilerin tek cihazda kalmasını isterseniz iOS Ayarlar uygulamasından iCloud oturumunu kapatabilir ya da iCloud Drive'ı kapatabilirsiniz. Puzzlr aynen çalışmaya devam eder, her şey o cihazda kalır. Android'de bunun bir karşılığı yoktur; orada ilerlemeniz her zaman cihazda kalır.</p>
 
-<h2>Paralar ve bahçe</h2>
-<p>Puzzlr, çözdüğünüz bulmacalar için para verir; bu paraları ipuçlarında ya da bahçenize koyacağınız bitkilerde harcarsınız. Paralar yalnızca oynayarak kazanılır. Uygulama içi satın alma, abonelik ve reklam yoktur; yani gerçek parayla alınan bir şey ve bizim görebileceğimiz bir ödeme bilgisi de yoktur. Hiçbir biçimde şans oyunu da yoktur: sürpriz kutu, çark ve rastgele ödül bulunmaz. Dükkândaki her ürünün fiyatı sabittir ve harcamadan önce ne alacağınızı tam olarak görürsünüz.</p>
-<p>Para bakiyeniz ve bahçeniz, ilerlemenizin geri kalanı gibi cihazınızda saklanır. İkisi de bize ulaşmaz. iPhone ve iPad'de, yukarıda anlatıldığı gibi, ilerlemenizle birlikte kendi iCloud hesabınız üzerinden sizinle gelir.</p>
+<h2 id="altin">Altın ve çiftlik</h2>
+<p>Puzzlr çözdüğünüz bulmacalar için altın verir. Bu altınları ipuçlarına ya da çiftliğinize kuracağınız yapılara harcarsınız. Altın yalnızca oynayarak kazanılır. Uygulama içi satın alma, abonelik ve reklam yoktur; yani gerçek parayla alınacak bir şey ve bizim görebileceğimiz bir ödeme bilgisi de yoktur. Hiçbir türden şans oyunu da yoktur: sürpriz kutu, çark ya da rastgele ödül bulunmaz. Her ipucunun ve her yapının fiyatı sabittir; harcamadan önce ne alacağınızı tam olarak görürsünüz.</p>
+<p>Altın bakiyeniz ve çiftliğiniz, ilerlemenizin geri kalanı gibi cihazınızda saklanır. İkisi de bize ulaşmaz. iPhone ve iPad'de, yukarıda anlatıldığı gibi, ilerlemenizle birlikte kendi iCloud hesabınız üzerinden sizinle gelir.</p>
 
-<h2>Verileri nasıl kullanırız</h2>
-<p>Yalnızca oyunları geliştirmek ve hataları gidermek için. Verilerinizi satmayız ve reklam için kullanmayız.</p>
+<h2 id="kullanim">Verileri ne için kullanırız</h2>
+<p>Oyunları geliştirmek, hataları gidermek ve bir bulmacanın sonunda tepki toplamlarını göstermek için. Verilerinizi satmayız ve reklam için kullanmayız.</p>
 
-<h2>Verileri kim işler</h2>
-<p>Google, Firebase aracılığıyla (Analytics, Crashlytics ve Cloud Firestore) analiz, çökme raporlama ve görüş saklama sağlayıcımız olarak hareket eder. Google'ın bu verileri işlemesi <a href="https://policies.google.com/privacy" rel="noopener" target="_blank">Google Gizlilik Politikası</a> ile yönetilir.</p>
-<p>Apple, yukarıda açıklanan iCloud eşitlemesindeki veriyi sizin adınıza saklar. Veri bizim değil sizin hesabınızda durur ve Puzzlr onu sizin cihazlarınız dışında hiçbir yerde okuyamaz.</p>
+<h2 id="isleyenler">Verileri kim işler</h2>
+<p><strong>Google</strong>, Firebase (Analytics, Crashlytics ve Cloud Firestore) aracılığıyla kullanım verisini, çökme raporlarını, tepkileri ve görüşleri bizim adımıza saklar. Google'ın bu verileri işlemesi <a href="https://policies.google.com/privacy?hl=tr" rel="noopener" target="_blank">Google Gizlilik Politikası</a> ile yönetilir.</p>
+<p><strong>Amazon Web Services</strong>, Bugünün yeri içeriğinin indirildiği sunucuyu barındırır. Bu sunucu yalnızca dosya teslim eder ve sizinle ilgili hiçbir şey tutmaz.</p>
+<p><strong>Apple</strong>, yukarıda anlatılan iCloud verisini sizin adınıza saklar. Bu veri bizim değil sizin hesabınızda durur ve Puzzlr onu sizin cihazlarınız dışında hiçbir yerde okuyamaz.</p>
 
-<h2>Tercihiniz</h2>
-<p>Bunu istediğiniz zaman kapatabilirsiniz. Puzzlr içinde Ayarlar'ı açın ve "Anonim kullanım verisi paylaş" seçeneğini kapatın. Kapalıyken uygulama analiz ve çökme verisi göndermeyi durdurur.</p>
-<p>Görüşler farklı çalıştığı için bu seçenek onları kapsamaz. Bir görüş notu yalnızca siz yazıp Gönder'e dokunduğunuz için gönderilir. Göndermek istemiyorsanız istemi "Belki sonra" ile kapatabilirsiniz.</p>
-<p>iCloud eşitlemesi de ayrıdır. Puzzlr içindeki bir seçeneğe değil, cihazınızın kendi iCloud ayarına bağlıdır; yukarıdaki iCloud bölümünde anlatıldığı gibi.</p>
+<h2 id="tercih">Tercihiniz</h2>
+<p>Bunu istediğiniz zaman kapatabilirsiniz. Puzzlr'da Profil sekmesini, ardından Ayarlar'ı açın ve "Anonim kullanım verisi paylaş" seçeneğini kapatın. Kapalıyken uygulama kullanım verisi ve çökme raporu göndermez; oyuncu numaranız da artık bunlarla birlikte gönderilmez.</p>
+<p>Tepkiler ve görüşler farklı işler, bu yüzden bu seçenek onları kapsamaz. İkisi de yalnızca siz dokunduğunuz için gönderilir: üç tepki düğmesinden birine ya da bir notun altındaki Gönder'e. İstemiyorsanız düğmelere dokunmayın ya da görüş penceresini "Belki sonra" ile kapatın.</p>
+<p>Bugünün yeri için yapılan indirmeler de bu seçeneğin kapsamında değildir, çünkü sizinle ilgili hiçbir şey taşımazlar.</p>
+<p>iCloud eşitlemesi, Puzzlr içindeki bir seçeneğe değil cihazınızın kendi iCloud ayarına bağlıdır; yukarıdaki iCloud bölümünde anlatıldığı gibi.</p>
 
-<h2>Veri saklama</h2>
-<p>Firebase, analiz verilerini Google'ın varsayılan sürelerine göre sınırlı bir süre saklar. Çökme raporları, sorunları gidermek için yararlı oldukları sürece tutulur. Görüşler, oyunları geliştirmek için yararlı oldukları sürece saklanır ve sonrasında silinir.</p>
+<h2 id="saklama">Ne kadar saklarız</h2>
+<ul>
+<li>Firebase Analytics, analiz verilerini Google'ın varsayılan süreleri boyunca saklar.</li>
+<li>Bir oturumda neye dokunulduğunun ve ne oynandığının kaydı 30 gün sonra silinir.</li>
+<li>Çökme raporları, sorunları gidermeye yaradıkları sürece tutulur.</li>
+<li>Görüşler, oyunları geliştirmeye yaradıkları sürece saklanır, sonra silinir.</li>
+<li>Tepkiler saklanır, çünkü eski bir günlük bulmaca paylaşılan bir bağlantıdan hâlâ açılabilir ve toplamlarının da orada durması gerekir.</li>
+</ul>
 
-<h2>Çocuklar</h2>
-<p>Puzzlr, 13 yaşın altındaki çocuklara yönelik değildir ve çocuklardan bilerek kişisel bilgi toplamayız.</p>
+<h2 id="cocuklar">Çocuklar</h2>
+<p>Puzzlr 13 yaşın altındaki çocuklara yönelik değildir ve çocuklardan bilerek kişisel bilgi toplamayız.</p>
 
-<h2>Değişiklikler</h2>
-<p>Bu politikayı değiştirirsek, bu sayfayı ve yukarıdaki tarihi güncelleriz.</p>
+<h2 id="degisiklikler">Değişiklikler</h2>
+<p>Bu politikayı değiştirirsek bu sayfayı ve en üstteki tarihi güncelleriz.</p>
 
-<h2>İletişim</h2>
-<p>Sorularınız mı var? Bize <a href="mailto:puzzlr-support@koraykural.com">puzzlr-support@koraykural.com</a> adresinden yazın.</p>
+<h2 id="iletisim">İletişim</h2>
+<p>Sorunuz mu var? Bize <a href="mailto:puzzlr-support@koraykural.com">puzzlr-support@koraykural.com</a> adresinden yazın.</p>
+</main>
 
-<footer>© 2026 Koray Kural</footer>
+<footer>© 2026 Koray Kural · <a href="support-tr.html">Destek</a></footer>
 </div>
 </body>
 </html>

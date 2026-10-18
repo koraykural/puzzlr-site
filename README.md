@@ -6,6 +6,7 @@ GitHub Pages. Plain static HTML, no build step.
 - `privacy.html` / `privacy-tr.html` - Privacy Policy (EN / TR)
 - `support.html` / `support-tr.html` - Support (EN / TR)
 - `index.html` - landing page linking to the above
-- `style.css` - shared styling
+- `style.css` - shared styling, in the app's design language
+- `fonts/` - the app's fonts, served from here (see `fonts/README.md`)
 
 The app code lives in a separate private repo.
